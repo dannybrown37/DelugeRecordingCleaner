@@ -36,8 +36,9 @@ class DelugeRecordingsCleaner(object):
         self.all_used_files = sorted(set(self.all_used_recs))
         if problem_files:
             print(
-                "The following files use firmware prior to 3.0 and\n"
-                "were been skipped:\n"
+                "The following files use a firmware version prior to 3.0.\n"
+                "They were skipped and not checked for used recordings.\n"
+                "Please see the ReadMe on what you can do to fix this.\n"
             )
             for filename in problem_files:
                 print(filename)

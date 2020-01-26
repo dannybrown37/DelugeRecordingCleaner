@@ -16,7 +16,7 @@ Instructions for use:
 2. Download the files from this repository. 
 
 3. Put `clean.py` in the root folder of your Deluge backup. 
-   i.e., add the same level as the KITS, SAMPLES, SONGS, and SYNTHS folders
+   i.e., at the same level as the KITS, SAMPLES, SONGS, and SYNTHS folders
 
 4. Run `clean.py`.
 
