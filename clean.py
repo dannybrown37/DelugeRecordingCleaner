@@ -43,6 +43,7 @@ class DelugeRecordingsCleaner(object):
                 )
                 for filename in problem_files:
                     f.write(filename)
+                print("See problem_files.txt for information on skipped files!")
         # print(self.all_used_files) # just for testing
 
     def move_unused_recordings_out_of_record_folder(self):
