@@ -25,7 +25,7 @@ Instructions for use:
    synth on your SD card. You can manually listen to these and delete as 
    desired. They are no longer in the SAMPLES/RECORD folder.
    
-More detail on usage with screenshots can be found at dannycbrown.com[http://dannycbrown.com/2020/01/26/deluge-by-synthsrom-audible-a-tool-to-identify-and-remove-unused-recordings/]
+[More detail on usage with screenshots can be found at dannycbrown.com](http://dannycbrown.com/2020/01/26/deluge-by-synthsrom-audible-a-tool-to-identify-and-remove-unused-recordings/)
 
 ----------------------------------------------------------------------
 
