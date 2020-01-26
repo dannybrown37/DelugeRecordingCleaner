@@ -23,7 +23,7 @@ Instructions for use:
 5. A new folder was created in your SAMPLES folder titled UNUSED RECORDINGS.
    These are recordings that do not appear to be used by any kit, song, or 
    synth on your SD card. You can manually listen to these and delete as 
-   desired. 
+   desired. They are no longer in the SAMPLES/RECORD folder.
 
 ----------------------------------------------------------------------
 
