@@ -19,9 +19,14 @@ class DelugeRecordingsCleaner(object):
 
     def traverse_folders_for_used_samples(self):
         self.all_used_recs = []
+        problem_files = []
         for folder in ["KITS", "SONGS", "SYNTHS"]:
             for filename in glob.glob("{}/*.XML".format(folder)):
-                tree = ET.parse(filename)
+                try:
+                    tree = ET.parse(filename)
+                except:
+                    problem_files += [filename]
+                    continue
                 root = tree.getroot()
                 search_xpath = ".//*[@fileName]"
                 elements = root.findall(search_xpath)
@@ -29,6 +34,13 @@ class DelugeRecordingsCleaner(object):
                 used_recs = [a for a in used_files if "SAMPLES/RECORD/" in a]
                 self.all_used_recs += used_recs
         self.all_used_files = sorted(set(self.all_used_recs))
+        if problem_files:
+            print(
+                "The following files use firmware prior to 3.0 and\n"
+                "were been skipped:\n"
+            )
+            for filename in problem_files:
+                print(filename)
         # print(self.all_used_files) # just for testing
 
     def move_unused_recordings_out_of_record_folder(self):
