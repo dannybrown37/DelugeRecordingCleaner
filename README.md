@@ -24,6 +24,8 @@ Instructions for use:
    These are recordings that do not appear to be used by any kit, song, or 
    synth on your SD card. You can manually listen to these and delete as 
    desired. They are no longer in the SAMPLES/RECORD folder.
+   
+More detail on usage with screenshots can be found at dannycbrown.com[http://dannycbrown.com/2020/01/26/deluge-by-synthsrom-audible-a-tool-to-identify-and-remove-unused-recordings/]
 
 ----------------------------------------------------------------------
 
