@@ -35,13 +35,14 @@ class DelugeRecordingsCleaner(object):
                 self.all_used_recs += used_recs
         self.all_used_files = sorted(set(self.all_used_recs))
         if problem_files:
-            print(
-                "The following files use a firmware version prior to 3.0.\n"
-                "They were skipped and not checked for used recordings.\n"
-                "Please see the ReadMe on what you can do to fix this.\n"
-            )
-            for filename in problem_files:
-                print(filename)
+            with open("problem_files.txt", "w") as f:
+                f.write(
+                    "The following files use a firmware version prior to 3.0."
+                    "\nThey were skipped and not checked for used recordings."
+                    "\nPlease see the ReadMe on what you can do to fix this.\n"
+                )
+                for filename in problem_files:
+                    f.write(filename)
         # print(self.all_used_files) # just for testing
 
     def move_unused_recordings_out_of_record_folder(self):
