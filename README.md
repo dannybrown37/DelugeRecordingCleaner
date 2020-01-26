@@ -1,7 +1,7 @@
 # Deluge Recording Cleaner
 
-Tool to move unused recordings on a Synthstrom Deluge SD card to a 
-separate folder called UNUSED RECORDINGS. 
+Tool to move unused recordings from the SAMPLES/RECORD folder on a 
+Synthstrom Deluge SD card to a separate folder called UNUSED RECORDINGS. 
 
 It is highly recommended that you use this program on a local backup
 of your SD card, confirm it did what you wanted it to do, then update
