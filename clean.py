@@ -11,11 +11,13 @@ class DelugeRecordingsCleaner(object):
         self.traverse_folders_for_used_samples()
         self.move_unused_recordings_out_of_record_folder()
 
+
     def get_names_of_recordings_in_record_folder(self):
         self.recordings = []
         for filename in glob.glob("SAMPLES/RECORD/*.wav"):
             self.recordings += [filename.replace("\\", "/")]
         # print(self.recordings) # just for testing
+
 
     def traverse_folders_for_used_samples(self):
         self.all_used_recs = []
@@ -46,8 +48,9 @@ class DelugeRecordingsCleaner(object):
                 print("See problem_files.txt for information on skipped files!")
         # print(self.all_used_files) # just for testing
 
+
     def move_unused_recordings_out_of_record_folder(self):
-        move = []
+        move = [r for r in self.recordings if r not in self.all_used_recs]
         for rec in self.recordings:
             if rec not in self.all_used_recs:
                 move += [rec]  
@@ -58,6 +61,7 @@ class DelugeRecordingsCleaner(object):
                 os.mkdir("SAMPLES/UNUSED RECORDINGS/")
                 copyfile(path, path.replace("RECORD/", "UNUSED RECORDINGS/"))
             os.remove(path)
+
 
 if __name__ == "__main__":
     DelugeRecordingsCleaner()
