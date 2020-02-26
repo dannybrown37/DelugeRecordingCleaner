@@ -50,10 +50,7 @@ class DelugeRecordingsCleaner(object):
 
 
     def move_unused_recordings_out_of_record_folder(self):
-        move = [r for r in self.recordings if r not in self.all_used_recs]
-        for rec in self.recordings:
-            if rec not in self.all_used_recs:
-                move += [rec]  
+        move = [r for r in self.recordings if r not in self.all_used_recs] 
         for path in move:
             try:
                 copyfile(path, path.replace("RECORD/", "UNUSED RECORDINGS/"))
